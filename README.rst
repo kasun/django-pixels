@@ -10,7 +10,7 @@ Features
 * Compose pixel tracking urls with different type IDs
 * Route tracking requests to functions using type IDs
 
-Implementation Guide
+Implementation Notes with Short Examples
 ----------
 
 Install django-pixels::
@@ -39,7 +39,7 @@ Get the general pixel tracking url:
     tracking_url = reverse('pixels:pixel') # given you have mounted django_pixels urls with namespace='pixels'
 
 
-Generate a pixel tracking call with type 1:
+Generate a pixel tracking url with type 1:
 
 .. code-block:: python
 
