@@ -10,7 +10,7 @@ Tests for `django_pixels` models module.
 
 from django.test import TestCase
 
-from django_pixels import models
+# from django_pixels import models
 
 
 class TestDjango_pixels(TestCase):

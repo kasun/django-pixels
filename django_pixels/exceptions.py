@@ -1,0 +1,2 @@
+class PixelError(Exception):
+    pass

@@ -20,7 +20,7 @@ Add django-pixels's URL patterns:
 
     urlpatterns = [
         ...
-        url(r'^{pattern}', include(django_pixels_urls), namespace="{namespace}"),
+        url(r'^tracker/', include(django_pixels_urls), namespace="django_pixels"),
         ...
     ]
 

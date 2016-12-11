@@ -44,13 +44,13 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='django_pixels',
+    name='django-pixels',
     version=version,
     description="""Pixels tracking made easy""",
     long_description=readme + '\n\n' + history,
     author='Kasun Herath',
     author_email='kasunh01@gmail.com',
-    url='https://github.com/kasun/django_pixels',
+    url='https://github.com/kasun/django-pixels',
     packages=[
         'django_pixels',
     ],
