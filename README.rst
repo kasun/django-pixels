@@ -76,6 +76,10 @@ Or mark a function to handle tracking calls with type 2:
         # handle tracking with the passed HttpRequest instance
 
 
+Settings
+----------
+* PIXELS_TYPE_PARAMETER_NAME - Change the parameter name used for tracking type
+
 
 Credits
 -------
