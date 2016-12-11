@@ -4,28 +4,78 @@ django-pixels
 
 Pixels tracking made easy
 
-Quickstart
+Features
+----------
+* Built-in view to serve a pixel response
+* Compose pixel tracking urls with different type IDs
+* Route tracking requests to functions using type IDs
+
+Implementation Guide
 ----------
 
 Install django-pixels::
 
-    pip install django_pixels
+    pip install django-pixels
 
-Add django-pixels's URL patterns:
+
+Mount pixel tracking URL patterns:
 
 .. code-block:: python
 
-    from django_pixels import urls as django_pixels_urls
-
+    import django_pixels
 
     urlpatterns = [
         ...
-        url(r'^tracker/', include(django_pixels_urls), namespace="django_pixels"),
+        url(r'^tracker/', include(django_pixels.urls, namespace="pixels")),
         ...
     ]
 
-Features
---------
+
+Get the general pixel tracking url:
+
+.. code-block:: python
+
+    from django.core.urlresolvers import reverse
+    tracking_url = reverse('pixels:pixel') # given you have mounted django_pixels urls with namespace='pixels'
+
+
+Generate a pixel tracking call with type 1:
+
+.. code-block:: python
+
+    from django_pixels import utils
+
+    utils.compose_pixel_url(tracking_url, 1)
+
+
+Write a function to handle tracking calls with type 1:
+
+.. code-block:: python
+
+    def track_emails(request):
+        # handle tracking with the passed HttpRequest instance
+
+
+Register the function to handle tracking calls with type 1:
+
+.. code-block:: python
+
+    from django_pixels import handlers
+
+    handlers.register(1, track_emails)
+
+
+Or mark a function to handle tracking calls with type 2:
+
+.. code-block:: python
+
+    from django_pixels import handlers
+
+    @handlers.track(type_id=2)
+    def track_emails(request):
+        # handle tracking with the passed HttpRequest instance
+
+
 
 Credits
 -------
