@@ -46,7 +46,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 setup(
     name='django-pixels',
     version=version,
-    description="""Pixels tracking made easy""",
+    description="""Tracking pixels made easy""",
     long_description=readme + '\n\n' + history,
     author='Kasun Herath',
     author_email='kasunh01@gmail.com',

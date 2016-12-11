@@ -2,7 +2,7 @@
 django-pixels
 =============================
 
-Pixels tracking made easy
+Tracking pixels made easy
 
 Features
 ----------
