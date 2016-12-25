@@ -22,11 +22,9 @@ Mount pixel tracking URL patterns:
 
 .. code-block:: python
 
-    import django_pixels
-
     urlpatterns = [
         ...
-        url(r'^tracker/', include(django_pixels.urls, namespace="pixels")),
+        url(r'^tracker/', include('django_pixels.urls', namespace="pixels")),
         ...
     ]
 
