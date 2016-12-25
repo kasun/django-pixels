@@ -31,12 +31,19 @@ Mount pixel tracking URL patterns:
     ]
 
 
-Get the general pixel tracking url:
+Get the general pixel tracking url (This serves a transparent pixel as the response):
 
 .. code-block:: python
 
     from django.core.urlresolvers import reverse
     tracking_url = reverse('pixels:pixel') # given you have mounted django_pixels urls with namespace='pixels'
+
+Get the tracking url with no-content(204) response (This serves an empty response with code 204):
+
+.. code-block:: python
+
+    from django.core.urlresolvers import reverse
+    tracking_url = reverse('pixels:pixel-204') # given you have mounted django_pixels urls with namespace='pixels'
 
 
 Generate a pixel tracking url with type 1:
