@@ -2,7 +2,7 @@
 django-pixels
 =============================
 
-Tracking pixels made easy
+Tracking pixels made easy. For Python 2 and Django 1.7+
 
 Features
 ----------
