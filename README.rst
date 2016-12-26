@@ -6,9 +6,9 @@ Tracking pixels made easy. For Python 2 and Django 1.7+
 
 Features
 ----------
-* Built-in view to serve a pixel response
-* Compose pixel tracking urls with different type IDs
-* Route tracking requests to functions using type IDs
+* Built-in views to serve transparent pixels or 204 responses.
+* Compose pixel tracking urls with different type IDs.
+* Route tracking requests to functions using type IDs.
 
 Implementation Notes with Short Examples
 ----------
